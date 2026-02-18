@@ -5,13 +5,13 @@ const GlobalErrorHandler = require("./v1/helper/globalError");
 
 const app = express();
 
-// @dev insert all libary
+// allow api to recieve body as json
 app.use(express.json());
 
 // @dev api end-point
 app.use("/v1", MainRoute);
 
-// @dev middlewars
+// send a organized error message
 app.use(GlobalErrorHandler);
 
 app.listen(3000, () => {

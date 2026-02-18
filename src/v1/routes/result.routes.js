@@ -6,6 +6,8 @@ const {
 
 const ResultRoute = Router();
 
+// That bottom route allow get/post method
+// it help front-end to query using body or search query
 ResultRoute.get("/", getStudentController);
 ResultRoute.post("/", postStudentController);
 
